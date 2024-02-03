@@ -24,7 +24,7 @@
 hs_err_pid*
 replay_pid*GeneTestshuffle.cpp
 
-## GRADLE
+## GRADLE / TOOLS
 .gradle
 **/build/
 !src/**/build/
@@ -47,3 +47,5 @@ gradle-app.setting
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 
+# IDE
+.settings

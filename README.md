@@ -1,18 +1,23 @@
 # Data-Structures-and-Algorithms
 
-A repo of data-structure and algorithm implementations
+A repo of data structure and algorithm implementations in various languages
 
 ## Project Structure
-
 ```shell
 .
 ├── java
 │   └── src
-│       └── main
+│       ├── main
+│       │   └── java
+│       │       ├── algorithms
+│       │       │   ├── BinarySearch.java
+│       │       │   └── BubbleSort.java
+│       │       └── Main.java
+│       └── test
 │           └── java
-│               ├── Algorithms
-│               │   └── BubbleSort.java
-│               └── Main.java
+│               └── algorithms
+│                   ├── BinarySearchTest.java
+│                   └── BubbleSortTest.java
 ├── python
 │   └── src
 │       ├── algorithms

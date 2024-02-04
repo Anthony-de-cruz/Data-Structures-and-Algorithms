@@ -4,6 +4,14 @@ import java.util.List;
 
 public class BinarySearch {
 
+    /**
+     * A binary search implementation
+     *
+     * @param list List to be searched
+     * @param term The search term
+     * @return Returns whether the search term is in the list
+     * @param <T> The type generic
+     */
     public static <T extends Comparable<T>> boolean binarySearch(List<T> list, T term) {
         int high = list.size();
         int low = 0;

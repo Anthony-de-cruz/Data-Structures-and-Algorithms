@@ -10,7 +10,7 @@ plugins {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'main.Main'
+        attributes 'Main-Class': 'Main'
     }
 }
 
@@ -19,5 +19,5 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
 }

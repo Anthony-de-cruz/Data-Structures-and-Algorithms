@@ -6,6 +6,7 @@
  */
 plugins {
     id 'java'
+    id "me.champeau.jmh" version "0.7.1"
 }
 
 jar {
@@ -20,4 +21,11 @@ repositories {
 
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+}
+
+jmh {
+    warmupIterations = 2
+    iterations = 5
+    fork = 1
+    resultFormat = 'CSV'
 }

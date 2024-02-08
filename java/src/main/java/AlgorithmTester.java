@@ -1,22 +1,23 @@
 public class AlgorithmTester {
 
-    public AlgorithmTester() {}
-
     @FunctionalInterface
     public interface passableMethod {
-        void apply();
+        void execute();
     }
 
     public static long averageTime(passableMethod m, int repetitions) {
-        long averageTime = 0;
+        long totalTime = 0;
         for (int x = 0; x < repetitions; x++) {
+            long time = timeAlgorithm(m);
+            totalTime += time;
+            System.out.println(time);
         }
-        return averageTime;
+        return totalTime / repetitions;
     }
 
     public static long timeAlgorithm(passableMethod m) {
         long startTime = System.nanoTime();
-        m.apply();
+        m.execute();
         long endTime = System.nanoTime();
         return endTime - startTime;
     }

@@ -27,7 +27,8 @@ public class BubbleSort {
     }
 
     /**
-     * An implementation of bubble sort
+     *
+     *
      *
      * @param array The array to be sorted
      * @param <T>   Any type that is comparable

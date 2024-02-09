@@ -10,7 +10,6 @@ public class AlgorithmTester {
         for (int x = 0; x < repetitions; x++) {
             long time = timeAlgorithm(m);
             totalTime += time;
-            System.out.println(time);
         }
         return totalTime / repetitions;
     }

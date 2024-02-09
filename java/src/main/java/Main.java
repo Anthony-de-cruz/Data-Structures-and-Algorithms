@@ -1,5 +1,4 @@
 import algorithms.BinarySearch;
-import algorithms.FibonacciSequence;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +20,5 @@ public class Main {
             () -> BinarySearch.binarySearch(list, searchTerm));
 
         System.out.printf("Binary search took %dns\n", time);
-
-        System.out.println(FibonacciSequence.fibonacciSequence(5));
     }
 }

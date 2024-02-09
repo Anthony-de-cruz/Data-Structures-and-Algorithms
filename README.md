@@ -46,7 +46,9 @@ A repo of data structure and algorithm implementations in various languages
 Benchmarking of implementations is currently setup for:
 
 - Java
-  Todo:
+
+Todo:
+
 - Python
 
 ### Java

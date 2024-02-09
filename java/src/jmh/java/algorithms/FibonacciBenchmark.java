@@ -16,7 +16,7 @@ import org.openjdk.jmh.infra.Blackhole;
 @State(Scope.Benchmark)
 public class FibonacciBenchmark {
 
-    @Param({"2", "4", "6", "8", "10"}) public int numbers;
+    @Param({"2", "4", "6", "8", "10"}) public long numbers;
 
     /**
      * Benchmark Fibonacci.iterative()

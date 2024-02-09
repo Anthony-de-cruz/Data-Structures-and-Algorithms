@@ -2,7 +2,13 @@ package algorithms;
 
 public class Fibonacci {
 
-    public static long iterative(int n) {
+    /**
+     * An iterative implementation of the Fibonacci sequence
+     *
+     * @param n The nth number in the Fibonacci sequence
+     * @return The Fibonacci sequence value
+     */
+    public static long iterative(long n) {
         long a = 0;
         long b = 1;
         long temp = 0;
@@ -14,12 +20,16 @@ public class Fibonacci {
         return a;
     }
 
-    public static int recursive(int n) {
-
+    /**
+     * A recursive implementation of the Fibonacci sequence
+     *
+     * @param n The nth number in the Fibonacci sequence
+     * @return The Fibonacci sequence value
+     */
+    public static long recursive(long n) {
         if (n < 2) {
             return n;
         }
-
         return recursive(n - 1) + recursive(n - 2);
     }
 }

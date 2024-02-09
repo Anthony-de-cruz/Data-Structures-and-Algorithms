@@ -9,11 +9,11 @@ A repo of data structure and algorithm implementations in various languages
 ├── java
 │   └── src
 │       ├── jmh
-│       │   └── java  <- Java benchmarking
+│       │   └── java
 │       │       └── algorithms
 │       │           ├── BinarySearchBenchmark.java
 │       │           └── FibonacciBenchmark.java
-│       ├── main  <- Java implementations
+│       ├── main
 │       │   └── java
 │       │       ├── algorithms
 │       │       │   ├── BinarySearch.java
@@ -28,7 +28,7 @@ A repo of data structure and algorithm implementations in various languages
 │                   ├── BubbleSortTest.java
 │                   └── FibonacciTest.java
 ├── python
-│   └── src  <- Python implementations
+│   └── src
 │       ├── algorithms
 │       │   ├── binary_search.py
 │       │   ├── bubble_sort.py

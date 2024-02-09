@@ -12,7 +12,8 @@ public class BinarySearch {
      * @return Returns whether the search term is in the list
      * @param <T> The type generic
      */
-    public static <T extends Comparable<T>> boolean binarySearch(List<T> list, T term) {
+    public static <T extends Comparable<T>> boolean binarySearch(List<T> list,
+                                                                 T term) {
         int high = list.size();
         int low = 0;
 

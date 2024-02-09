@@ -8,16 +8,17 @@ A repo of data structure and algorithm implementations in various languages
 .
 ├── java
 │   └── src
-│       ├── jmh  <- Java benchmarking
-│       │   └── java
+│       ├── jmh
+│       │   └── java  <- Java benchmarking
 │       │       └── algorithms
-│       │           └── BinarySearchBenchmark.java
+│       │           ├── BinarySearchBenchmark.java
+│       │           └── FibonacciBenchmark.java
 │       ├── main  <- Java implementations
 │       │   └── java
 │       │       ├── algorithms
 │       │       │   ├── BinarySearch.java
 │       │       │   ├── BubbleSort.java
-│       │       │   └── FibonacciSequence.java
+│       │       │   └── Fibonacci.java
 │       │       ├── AlgorithmTester.java
 │       │       └── Main.java
 │       └── test
@@ -25,7 +26,7 @@ A repo of data structure and algorithm implementations in various languages
 │               └── algorithms
 │                   ├── BinarySearchTest.java
 │                   ├── BubbleSortTest.java
-│                   └── FibonacciSequenceTest.java
+│                   └── FibonacciTest.java
 ├── python
 │   └── src  <- Python implementations
 │       ├── algorithms

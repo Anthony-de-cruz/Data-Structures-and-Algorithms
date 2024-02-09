@@ -27,5 +27,5 @@ jmh {
     warmupIterations = 2
     iterations = 5
     fork = 1
-    resultFormat = 'CSV'
+    resultFormat = 'JSON'
 }

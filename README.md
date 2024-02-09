@@ -3,6 +3,7 @@
 A repo of data structure and algorithm implementations in various languages
 
 ## Project Structure
+
 ```shell
 .
 ├── java
@@ -31,3 +32,16 @@ A repo of data structure and algorithm implementations in various languages
 │       └── main.py
 └── README.md
 ```
+
+## Benchmarking
+
+Benchmarking of implementations is currently setup for:
+
+- Java
+  Todo:
+- Python
+
+### Java
+
+The benchmarking is done via [JMH](https://github.com/openjdk/jmh),
+integrated into Gradle using [jmh-gradle-plugin](https://github.com/melix/jmh-gradle-plugin)

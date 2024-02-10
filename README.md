@@ -15,7 +15,7 @@ A repo of data structure and algorithm implementations in various languages.
   - Insertion
   - Pre Order Traversal
  
-### Building / Testing / Benchmarking
+### Building / Testing
 The Java implementations use the Gradle build tool. 
 
 In order to build and test on Unix, run:
@@ -25,7 +25,7 @@ cd java
 ```
 For Windows, run gradlew.bat with the `build` argument
 
-
+### Benchmarking
 The benchmarking is done via [JMH](https://github.com/openjdk/jmh),
 integrated into Gradle using the [jmh-gradle-plugin](https://github.com/melix/jmh-gradle-plugin).
 
@@ -42,6 +42,8 @@ For Windows, run gradlew.bat with the `jmhJar` argument and then run `build/libs
 
 - Binary Search
 - Bubble Sort
+- Quick Sort
+- 2 Crystal Balls Problem
 - Find Power of 2 Wihout Divison
 
 ### Data structures implemented in Python:
@@ -53,5 +55,8 @@ For Windows, run gradlew.bat with the `jmhJar` argument and then run `build/libs
   - Breadth First Search
   - Tree Comparison
 
-### Building / Testing / Benchmarking
+### Building / Testing
+Each script performs it's tests when ran as `__main__`
+
+### Benchmarking
 Benchmarking not yet setup.

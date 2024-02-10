@@ -1,57 +1,57 @@
 # Data-Structures-and-Algorithms
 
-A repo of data structure and algorithm implementations in various languages
+A repo of data structure and algorithm implementations in various languages.
 
-## Project Structure
+# Java
+### Algorithms implemented in Java:
 
-```shell
-.
-├── java
-│   └── src
-│       ├── jmh
-│       │   └── java
-│       │       └── algorithms
-│       │           ├── BinarySearchBenchmark.java
-│       │           └── FibonacciBenchmark.java
-│       ├── main
-│       │   └── java
-│       │       ├── algorithms
-│       │       │   ├── BinarySearch.java
-│       │       │   ├── BubbleSort.java
-│       │       │   └── Fibonacci.java
-│       │       ├── AlgorithmTester.java
-│       │       └── Main.java
-│       └── test
-│           └── java
-│               └── algorithms
-│                   ├── BinarySearchTest.java
-│                   ├── BubbleSortTest.java
-│                   └── FibonacciTest.java
-├── python
-│   └── src
-│       ├── algorithms
-│       │   ├── binary_search.py
-│       │   ├── bubble_sort.py
-│       │   ├── power_of_2.py
-│       │   ├── quick_sort.py
-│       │   └── two_crystal_balls.py
-│       ├── data_structures
-│       │   └── binary_tree.py
-│       └── main.py
-└── README.md
+- Binary Search
+- Bubble Sort
+- Fibonacci Sequence
+
+### Data structures implemented in Java:
+
+- Binary Tree
+  - Insertion
+  - Pre Order Traversal
+ 
+### Building / Testing / Benchmarking
+The Java implementations use the Gradle build tool. 
+
+In order to build and test on Unix, run:
+```sh
+cd java
+./gradlew build
 ```
+For Windows, run gradlew.bat with the `build` argument
 
-## Benchmarking
-
-Benchmarking of implementations is currently setup for:
-
-- Java
-
-Todo:
-
-- Python
-
-### Java
 
 The benchmarking is done via [JMH](https://github.com/openjdk/jmh),
-integrated into Gradle using [jmh-gradle-plugin](https://github.com/melix/jmh-gradle-plugin)
+integrated into Gradle using the [jmh-gradle-plugin](https://github.com/melix/jmh-gradle-plugin).
+
+In order to build and run benchmarks on Unix, run:
+```sh
+cd java
+./gradlew jmhJar
+java -jar build/libs/java-jmh.jar
+```
+For Windows, run gradlew.bat with the `jmhJar` argument and then run `build/libs/java-jmh.jar`
+
+# Python
+### Algorithms implemented in Python:
+
+- Binary Search
+- Bubble Sort
+- Find Power of 2 Wihout Divison
+
+### Data structures implemented in Python:
+
+- Binary Tree
+  - Insertion
+  - Pre Order Traversal
+  - Post Order Traversal
+  - Breadth First Search
+  - Tree Comparison
+
+### Building / Testing / Benchmarking
+Benchmarking not yet setup.

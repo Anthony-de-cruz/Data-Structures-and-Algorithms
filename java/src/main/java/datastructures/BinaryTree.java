@@ -1,8 +1,10 @@
 package datastructures;
 
+import java.lang.Comparable;
 import java.util.ArrayList;
 
-public class BinaryTree<T extends Comparable<T>> {
+public class BinaryTree<T extends Comparable<T>>
+    implements Comparable<BinaryTree<T>> {
 
     private BinaryNode root;
 
@@ -15,10 +17,14 @@ public class BinaryTree<T extends Comparable<T>> {
         public BinaryNode(T value) { this.value = value; }
 
         /**
+         * Insert the given value to the binary tree.
          *
+         * Throws an exception when a duplicate value is passed.
          *
-         * @param node
-         * @throws DuplicateValueException
+         * @param value The element to be given
+         * @throws DuplicateValueException Thrown when the passed value is
+         *     already
+         *                                 in the tree
          */
         public void insert(BinaryNode node) throws DuplicateValueException {
 
@@ -45,10 +51,11 @@ public class BinaryTree<T extends Comparable<T>> {
         }
 
         /**
+         * Depth pre order traverses in order of depth;
+         * can be used to copy a tree.
          *
-         *
-         * @param path
-         * @return
+         * @param path The array to hold the traversal path
+         * @return The array that holds that traversal path
          */
         public ArrayList<T> depthPreOrderWalk(ArrayList<T> path) {
 
@@ -66,19 +73,66 @@ public class BinaryTree<T extends Comparable<T>> {
             // Post
             return path;
         }
+
+        /**
+         * Depth in order traverses in order of value.
+         *
+         * @param path The array to hold the traversal path
+         * @return The array that holds that traversal path
+         */
+        public ArrayList<T> depthInOrderWalk(ArrayList<T> path) {
+
+            // Pre
+
+            // Recurse
+            if (this.left != null) {
+                this.left.depthInOrderWalk(path);
+            }
+            path.add(this.value);
+
+            if (this.right != null) {
+                this.right.depthInOrderWalk(path);
+            }
+            // Post
+            return path;
+        }
+
+        /**
+         * Depth post order traverses in the opposite order of depth;
+         * can be used for reverse polish notation.
+         *
+         * @param path The array to hold the traversal path
+         * @return The array that holds that traversal path
+         */
+        public ArrayList<T> depthPostOrderWalk(ArrayList<T> path) {
+
+            // Pre
+
+            // Recurse
+            if (this.left != null) {
+                this.left.depthPostOrderWalk(path);
+            }
+
+            if (this.right != null) {
+                this.right.depthPostOrderWalk(path);
+            }
+            // Post
+            path.add(this.value);
+            return path;
+        }
     }
 
     /**
-     *
-     *
-     * @param root
+     * @param root The root element of the tree
      */
     public BinaryTree(T root) { this.root = new BinaryNode(root); }
 
     /**
+     * Insert the given value to the binary tree.
      *
+     * Throws an exception when a duplicate value is passed.
      *
-     * @param value
+     * @param value The element to be given
      * @throws DuplicateValueException Thrown when the passed value is already
      *                                 in the tree
      */
@@ -87,10 +141,10 @@ public class BinaryTree<T extends Comparable<T>> {
     }
 
     /**
-     * Depth first traversal is a recursive algorithm,
+     * Depth traversal is a recursive algorithm,
      * and so uses a stack to traverse the tree.
      *
-     * It traverses in order of depth;
+     * Depth pre order traverses in order of depth;
      * can be used to copy a tree.
      *
      * It's complexity is O(V+E) where V is the number
@@ -104,10 +158,10 @@ public class BinaryTree<T extends Comparable<T>> {
     }
 
     /**
-     * Depth first traversal is a recursive algorithm,
+     * Depth traversal is a recursive algorithm,
      * and so uses a stack to traverse the tree.
      *
-     * It traverses in order of value.
+     * Depth in order traverses in order of value.
      *
      * It's complexity is O(V+E) where V is the number
      * of verticies and E is the number of edges.
@@ -115,7 +169,41 @@ public class BinaryTree<T extends Comparable<T>> {
      *
      * @return An ArrayList containing the values in order of traversal
      */
-    public ArrayList<T> depthPostOrder() { return new ArrayList<T>(); }
+    public ArrayList<T> depthInOrder() {
+        return this.root.depthInOrderWalk(new ArrayList<T>());
+    }
+
+    /**
+     * Depth traversal is a recursive algorithm,
+     * and so uses a stack to traverse the tree.
+     *
+     * Depth post order traverses in the opposite order of depth;
+     * can be used for reverse polish notation.
+     *
+     * It's complexity is O(V+E) where V is the number
+     * of verticies and E is the number of edges.
+     * This boils down to O(N).
+     *
+     * @return An ArrayList containing the values in order of traversal
+     */
+    public ArrayList<T> depthPostOrder() {
+        return this.root.depthPostOrderWalk(new ArrayList<T>());
+    }
+
+    @Override
+    public int compareTo(BinaryTree<T> other) {
+
+        ArrayList<T> thisPath = this.depthPreOrder();
+        ArrayList<T> otherPath = other.depthPreOrder();
+
+        for (int x = 0; x < thisPath.size(); x++) {
+            int comparison = thisPath.get(x).compareTo(otherPath.get(x));
+            if (comparison != 0) {
+                return comparison;
+            }
+        }
+        return 0;
+    }
 
     public T getRoot() { return root.value; }
 }

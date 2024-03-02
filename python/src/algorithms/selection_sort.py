@@ -1,11 +1,13 @@
 def selection_sort(array: list[int]) -> None:
     """This sorting algorithm is O(n^2)"""
 
-    for x in range(len(array) - 1):
+    n = len(array)
+
+    for x in range(n - 1):
         # Find the next smallest element
         position = x
         minimum = array[x]
-        for y in range(x, len(array)):
+        for y in range(x, n):
             if array[y] < minimum:
                 position = y
                 minimum = array[y]

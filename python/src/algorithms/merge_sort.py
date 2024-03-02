@@ -7,22 +7,12 @@ def merge_sort(array: list[int]) -> list[int]:
     if n < 2:
         return array
 
-    # Split
-    half = n // 2
-    left_split = array[:half]
-    right_split = array[half:]
-
-    # print(f"Splitting: {array} into {left_split}, {right_split}")
-
-    left_split = merge_sort(left_split)
-    right_split = merge_sort(right_split)
-
-    return merge(left_split, right_split)
+    # Split into 2 halves
+    return merge(merge_sort(array[: n // 2]), merge_sort(array[n // 2 :]))
 
 
 def merge(left: list[int], right: list[int]) -> list[int]:
     sorted = []
-    # print(f"    Merging: {left} + {right}")
 
     # Sort through left and right
     while left and right:
@@ -40,8 +30,6 @@ def merge(left: list[int], right: list[int]) -> list[int]:
         sorted += left
     if right:
         sorted += right
-
-    # print(f"        -> {sorted}")
 
     return sorted
 

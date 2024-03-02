@@ -1,26 +1,11 @@
-def merge_sort(array: list[int]) -> list[int]:
-    """This sorting algorithm is O(nlog(n)) performance
-    and has O(n) spacial complexity"""
-
-    n = len(array)
-
-    if n < 2:
-        return array
-
-    # Split into 2 halves
-    return merge(merge_sort(array[: n // 2]), merge_sort(array[n // 2 :]))
-
-
-def merge(left: list[int], right: list[int]) -> list[int]:
+def _merge(left: list[int], right: list[int]) -> list[int]:
     sorted = []
 
     # Sort through left and right
     while left and right:
-
         if left[0] < right[0]:
             sorted.append(left[0])
             left.pop(0)
-
         else:
             sorted.append(right[0])
             right.pop(0)
@@ -32,6 +17,19 @@ def merge(left: list[int], right: list[int]) -> list[int]:
         sorted += right
 
     return sorted
+
+
+def merge_sort(array: list[int]) -> list[int]:
+    """This sorting algorithm is O(nlog(n)) performance
+    and has O(n) spacial complexity"""
+
+    n = len(array)
+
+    if n < 2:
+        return array
+
+    # Split into 2 halves
+    return _merge(merge_sort(array[: n // 2]), merge_sort(array[n // 2 :]))
 
 
 def test() -> bool:

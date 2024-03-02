@@ -2,9 +2,8 @@ import math
 
 
 def two_crystal_balls(breaks: list[bool]) -> int:
-
     """Given 2 crystal balls, find the breaking point distance
-    in the most efficient way. This implementation is O(sqtr(n))."""
+    in the most efficient way. This implementation is O(sqrt(n))."""
 
     jump_amount = math.floor(math.sqrt(len(breaks)))
     breakpoint = -1

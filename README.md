@@ -51,12 +51,17 @@ For Windows, run gradlew.bat with the `jmhJar` argument and then run `build/libs
 
 ### Algorithms implemented in Python:
 
+#### Searching Algorithms
 - Binary Search
+#### Sorting Algorithms
+- Bogo Sort
 - Bubble Sort
 - Insertion Sort
 - Merge Sort
 - Quick Sort
 - Selection Sort
+- Stalin Sort
+#### Interview questions
 - 2 Crystal Balls Problem
 - Find Power of 2 Wihout Divison
 

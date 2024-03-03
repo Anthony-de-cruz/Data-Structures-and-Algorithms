@@ -1,6 +1,6 @@
 # Data-Structures-and-Algorithms
 
-A repo of data structure and algorithm implementations in various languages.
+A repository of data structures, algorithms, and interesting interview question solutions implemented in various langauges.
 
 # Java
 

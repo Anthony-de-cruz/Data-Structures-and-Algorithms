@@ -63,7 +63,8 @@ For Windows, run gradlew.bat with the `jmhJar` argument and then run `build/libs
 - Stalin Sort
 #### Interview questions
 - 2 Crystal Balls Problem
-- Find Power of 2 Wihout Divison
+- Find Power of 2 Wihout Division
+- Median of Two Sorted Arrays
 
 ### Data structures implemented in Python:
 

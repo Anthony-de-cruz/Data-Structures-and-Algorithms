@@ -82,3 +82,17 @@ Each script performs it's tests when ran as `__main__`
 ### Benchmarking
 
 Benchmarking not yet setup.
+
+# C
+
+### Data structures implemented in C:
+
+- Binary Tree
+  - Insertion
+  - Pre Order Traversal
+  - Post Order Traversal
+
+### Building / Testing
+
+Each implementation has examples.
+
